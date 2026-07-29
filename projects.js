@@ -8,7 +8,8 @@ const projectsData = [
         summary: 'Comprehensive mock exam platform for railways candidates with complete exam history & Mock Exam Creator.',
         description: 'Railway Study Point is a full-featured mock exam application custom built for candidates preparing for competitive railway exams. The platform includes an interactive profile settings view, Premium Membership detail analytics, Categories/Folders structure, and a mock exam dashboard. It also features a fully functional mock exam creator console allowing admins to set scheduling, duration, scoring, and questions.',
         technologies: ['TypeScript', 'Next.js', 'React', 'Vercel', 'TailwindCSS'],
-        link: 'https://railway-study-point.vercel.app/',
+        link: '',
+        isPrivate: true,
         screenshots: [
             'images/railway-study-point-2.png',
             'images/railway-study-point-1.png'
@@ -57,11 +58,26 @@ const projectsData = [
         technologies: ['JavaScript', 'CSS', 'HTML', 'Netlify'],
         link: 'https://rw-comment-web.netlify.app/',
         screenshots: [
+            'images/rw-comment-main.png',
             'images/rw-comment-1.png',
             'images/rw-comment-2.png',
             'images/rw-comment-3.png',
             'images/rw-comment-4.png',
             'images/rw-comment-5.png'
+        ]
+    },
+    {
+        id: 'file-converter-manager',
+        title: 'File Converter & Manager',
+        category: 'tool',
+        categoryLabel: 'Tools & Utilities',
+        summary: 'All-in-one premium free file utility platform: Image to PDF, Image Compressor, Image Cropper, Passport Size Photo Maker & more.',
+        description: 'File Converter & Manager is a comprehensive, premium free-of-cost digital utility platform designed to handle file conversions and media editing. Features include Image to PDF conversion, smart Image Compressor, precision Image Cropper, Passport Size Photo Maker, and multiple file processing tools.',
+        technologies: ['JavaScript', 'Canvas API', 'TailwindCSS', 'HTML5', 'File API'],
+        link: '',
+        isComingSoon: true,
+        screenshots: [
+            'images/file-converter-manager-1.png'
         ]
     },
     {
@@ -119,8 +135,10 @@ function renderProjects(filter = 'all') {
         card.innerHTML = `
             <div class="relative overflow-hidden aspect-video bg-slate-900 border-b border-slate-800/50">
                 <img src="${project.screenshots[0]}" alt="${project.title}" loading="lazy" class="w-full h-full object-cover object-center transition duration-500 group-hover:scale-105 group-hover:opacity-90">
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent flex items-end p-4">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent flex items-end p-4 gap-2">
                     <span class="text-xs bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 font-bold px-3 py-1 rounded-full backdrop-blur-md">${project.categoryLabel}</span>
+                    ${project.isComingSoon ? `<span class="text-xs bg-purple-500/20 border border-purple-500/40 text-purple-300 font-bold px-3 py-1 rounded-full backdrop-blur-md">Coming Soon</span>` : ''}
+                    ${project.isPrivate ? `<span class="text-xs bg-amber-500/20 border border-amber-500/40 text-amber-300 font-bold px-3 py-1 rounded-full backdrop-blur-md">Private</span>` : ''}
                 </div>
             </div>
             <div class="p-6 flex flex-col justify-between flex-1 space-y-4">
@@ -211,6 +229,13 @@ function openProjectDetails(projectId) {
     } else {
         linkBtn.classList.add('hidden');
         linkPlaceholder.classList.remove('hidden');
+        if (project.isComingSoon) {
+            linkPlaceholder.innerHTML = '<i class="fa-solid fa-clock text-xs mr-2 text-purple-400"></i>Coming Soon — Link will be added soon';
+        } else if (project.isPrivate) {
+            linkPlaceholder.innerHTML = '<i class="fa-solid fa-lock text-xs mr-2 text-amber-400"></i>Private Project — Designed for Client';
+        } else {
+            linkPlaceholder.innerHTML = '<i class="fa-solid fa-lock text-xs mr-2"></i>Internal System / Private deployment';
+        }
     }
     
     // Setup Slides
