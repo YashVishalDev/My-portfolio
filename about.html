@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Yash Vishal - AI/ML & Web Innovator</title>
+    
+    <!-- Favicon & Search Engine Metadata -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <!-- Preconnect CDNs for Speed -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#030712',
+                            card: 'rgba(15, 23, 42, 0.6)',
+                            primary: '#4f46e5',
+                            secondary: '#06b6d4',
+                            accent: '#d946ef',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Custom Style Modules -->
+    <link rel="stylesheet" href="styles.css?v=1.2">
+    <link rel="stylesheet" href="animations.css?v=1.2">
+</head>
+
+<body class="text-slate-100">
+
+    <!-- Background Blobs -->
+    <div class="glow-blob bg-indigo-600 w-96 h-96 top-20 left-10"></div>
+    <div class="glow-blob bg-cyan-500 w-[450px] h-[450px] top-[40%] right-10" style="animation-delay: 5s;"></div>
+
+    <!-- Header Navigation -->
+    <header class="glass-nav fixed top-0 left-0 w-full z-40">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-black tracking-wider text-white">
+                My portfolio<span class="text-cyan-400">.</span>
+            </a>
+            
+            <button id="menu-btn" class="md:hidden text-slate-100 hover:text-cyan-400 transition-colors focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+
+            <nav id="nav-menu" class="hidden md:flex md:items-center space-y-4 md:space-y-0 md:space-x-8 absolute md:relative top-full left-0 w-full md:w-auto bg-slate-950/95 md:bg-transparent border-b border-slate-800 md:border-0 p-6 md:p-0">
+                <a href="index.html" class="block text-slate-300 hover:text-white transition-colors duration-300 font-medium py-1">Home</a>
+                <a href="about.html" class="block text-slate-300 hover:text-white transition-colors duration-300 font-medium py-1">About</a>
+                <a href="services.html" class="block text-slate-300 hover:text-white transition-colors duration-300 font-medium py-1">Services</a>
+                <a href="projects.html" class="block text-slate-300 hover:text-white transition-colors duration-300 font-medium py-1">Projects</a>
+                <a href="contact.html" class="block text-slate-300 hover:text-white transition-colors duration-300 font-medium py-1">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="relative z-10 pt-32 pb-24 min-h-screen page-fade-in">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl md:text-5xl font-black tracking-tight text-white mb-4">About Me</h2>
+                <div class="w-16 h-1 bg-gradient-to-r from-indigo-500 to-cyan-400 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                <!-- Image Area -->
+                <div class="lg:col-span-5 flex justify-center reveal" data-delay="100">
+                    <div class="relative group">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-400 rounded-full blur opacity-40 group-hover:opacity-80 transition duration-1000 group-hover:duration-200"></div>
+                        
+                        <div class="relative w-72 h-72 md:w-96 md:h-96 bg-slate-900 border-2 border-indigo-500/30 rounded-full overflow-hidden flex items-center justify-center">
+                            <img src="images/profile_original.jpg" alt="Yash Vishal" loading="lazy" class="w-full h-full object-cover object-top rounded-full transition duration-500 group-hover:scale-105">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Narrative Area -->
+                <div class="lg:col-span-7 space-y-8 reveal" data-delay="200">
+                    <h3 class="text-3xl font-extrabold text-white">
+                        I'm <span class="text-indigo-400">Yash Vishal</span>, a technical innovator from Darbhanga, Bihar.
+                    </h3>
+                    
+                    <div class="space-y-4 text-slate-400 text-lg leading-relaxed">
+                        <p>
+                            I operate at the convergence of software engineering, artificial intelligence training, and mobile application marketing. As the founder of <span class="font-semibold text-white">Reviews World</span>, I have successfully scaled app installs and client visibility using data-driven marketing frameworks.
+                        </p>
+                        <p>
+                            I specialize in building responsive front-end products, configuring automation utilities, and optimizing AI conversational models. I am deeply committed to crafting elegant code and optimizing conversion layouts that generate tangible business value.
+                        </p>
+                    </div>
+
+                    <!-- Info Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-slate-900">
+                        <!-- Education Details -->
+                        <div class="flex gap-4 items-start">
+                            <div class="w-12 h-12 bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 rounded-xl flex items-center justify-center flex-shrink-0 text-xl">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 uppercase tracking-wider font-semibold">Education</p>
+                                <h4 class="text-white font-bold mt-1">BCA (AI / ML)</h4>
+                                <p class="text-sm text-slate-400">Ganpat University</p>
+                                <p class="text-xs text-slate-500">Mehsana, Gujarat, India</p>
+                            </div>
+                        </div>
+
+                        <!-- Location Details -->
+                        <div class="flex gap-4 items-start">
+                            <div class="w-12 h-12 bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 rounded-xl flex items-center justify-center flex-shrink-0 text-xl">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 uppercase tracking-wider font-semibold">Location</p>
+                                <h4 class="text-white font-bold mt-1">Darbhanga, India</h4>
+                                <p class="text-sm text-slate-400">Bihar (846001)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-900 py-12 relative z-20">
+        <div class="container mx-auto px-6 text-center text-slate-500">
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="https://youtube.com/@reviews_world_official?si=1Y357cJqrMC6U7Kt" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-red-500/10 border border-red-500/30 rounded-full flex items-center justify-center text-red-500 hover:text-white hover:bg-red-600/80 hover:border-red-500 transition-all transform hover:scale-110 shadow-lg shadow-red-500/10">
+                    <i class="fab fa-youtube text-lg"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/yash-vishal/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-blue-600/10 border border-blue-500/30 rounded-full flex items-center justify-center text-blue-400 hover:text-white hover:bg-blue-600 hover:border-blue-500 transition-all transform hover:scale-110 shadow-lg shadow-blue-500/10">
+                    <i class="fab fa-linkedin-in text-lg"></i>
+                </a>
+                <a href="https://t.me/Scripter_yash_official" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-sky-500/10 border border-sky-400/30 rounded-full flex items-center justify-center text-sky-400 hover:text-white hover:bg-sky-500 hover:border-sky-400 transition-all transform hover:scale-110 shadow-lg shadow-sky-500/10">
+                    <i class="fab fa-telegram-plane text-lg"></i>
+                </a>
+                <a href="mailto:reviewsworld01@gmail.com" class="w-12 h-12 bg-indigo-500/10 border border-indigo-500/30 rounded-full flex items-center justify-center text-indigo-400 hover:text-white hover:bg-indigo-600 hover:border-indigo-500 transition-all transform hover:scale-110 shadow-lg shadow-indigo-500/10">
+                    <i class="fas fa-envelope text-lg"></i>
+                </a>
+                <a href="https://wa.me/919525182488" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-emerald-500/10 border border-emerald-500/30 rounded-full flex items-center justify-center text-emerald-400 hover:text-white hover:bg-emerald-600/80 hover:border-emerald-500 transition-all transform hover:scale-110 shadow-lg shadow-emerald-500/10">
+                    <i class="fab fa-whatsapp text-lg"></i>
+                </a>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center text-sm gap-4">
+                <p>&copy; 2026 Reviews World. Crafted with passion by Yash Vishal.</p>
+                <p class="text-slate-600">Last Updated: 26-06-2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script Modules -->
+    <script src="nav.js?v=1.1"></script>
+</body>
+
+</html>

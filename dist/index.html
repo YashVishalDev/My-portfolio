@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yash Vishal - AI/ML Engineer & Web Developer</title>
+    
+    <!-- Favicon & Search Engine Metadata -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <!-- Preconnect CDNs for Speed -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#030712',
+                            card: 'rgba(15, 23, 42, 0.6)',
+                            primary: '#4f46e5',
+                            secondary: '#06b6d4',
+                            accent: '#d946ef',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Custom Style Modules -->
+    <link rel="stylesheet" href="styles.css?v=1.2">
+    <link rel="stylesheet" href="animations.css?v=1.2">
+</head>
+
+<body class="text-slate-100">
+
+    <!-- Background Blobs -->
+    <div class="glow-blob bg-indigo-600 w-96 h-96 top-20 left-10"></div>
+    <div class="glow-blob bg-cyan-500 w-[450px] h-[450px] top-[40%] right-10" style="animation-delay: 5s;"></div>
+
+    <!-- Header Navigation -->
+    <header class="glass-nav fixed top-0 left-0 w-full z-40">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-black tracking-wider text-white">
+                My portfolio<span class="text-cyan-400">.</span>
+            </a>
+            
+            <button id="menu-btn" class="md:hidden text-slate-100 hover:text-cyan-400 transition-colors focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+
+            <nav id="nav-menu" class="hidden md:flex md:items-center space-y-4 md:space-y-0 md:space-x-8 absolute md:relative top-full left-0 w-full md:w-auto bg-slate-950/95 md:bg-transparent border-b border-slate-800 md:border-0 p-6 md:p-0">
+                <a href="index.html" class="block text-slate-300 hover:text-white transition-colors duration-300 font-medium py-1">Home</a>
+                <a href="about.html" class="block text-slate-300 hover:text-white transition-colors duration-300 font-medium py-1">About</a>
+                <a href="services.html" class="block text-slate-300 hover:text-white transition-colors duration-300 font-medium py-1">Services</a>
+                <a href="projects.html" class="block text-slate-300 hover:text-white transition-colors duration-300 font-medium py-1">Projects</a>
+                <a href="contact.html" class="block text-slate-300 hover:text-white transition-colors duration-300 font-medium py-1">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="relative z-10 min-h-screen flex items-center justify-center pt-20 overflow-hidden page-fade-in">
+        <canvas id="particles-js"></canvas>
+        <div class="container mx-auto px-6 text-center relative z-20">
+            <div class="max-w-4xl mx-auto space-y-8">
+                <p class="inline-flex items-center gap-2 bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 px-4 py-2 rounded-full text-sm font-semibold tracking-wider uppercase mx-auto reveal">
+                    <span class="w-2 h-2 rounded-full bg-indigo-400 animate-ping"></span> Available for Freelance & Projects
+                </p>
+                
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight leading-none reveal" data-delay="100">
+                    Crafting Intelligent <br>
+                    <span class="text-gradient">Digital Experiences</span>
+                </h1>
+                
+                <p class="text-slate-400 text-lg md:text-2xl max-w-2xl mx-auto leading-relaxed reveal" data-delay="200">
+                    Web Developer, App Marketing Specialist, and AI Model Trainer. Designing high-conversion platforms and building smarter digital products.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4 reveal" data-delay="300">
+                    <a href="projects.html" class="w-full sm:w-auto bg-gradient-to-r from-indigo-600 to-cyan-500 hover:from-indigo-700 hover:to-cyan-600 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-xl shadow-indigo-600/40 text-lg">
+                        Explore Projects
+                    </a>
+                    <a href="https://youtube.com/@reviews_world_official?si=1Y357cJqrMC6U7Kt" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto flex items-center justify-center gap-3 bg-slate-900 border border-slate-800 hover:border-red-500/30 text-slate-300 hover:text-red-500 font-bold py-4 px-8 rounded-full transition-all duration-300 text-lg">
+                        <i class="fab fa-youtube text-red-500 text-2xl"></i>
+                        <span>Watch YouTube Channel</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-900 py-12 relative z-20">
+        <div class="container mx-auto px-6 text-center text-slate-500">
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="https://youtube.com/@reviews_world_official?si=1Y357cJqrMC6U7Kt" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-red-500/10 border border-red-500/30 rounded-full flex items-center justify-center text-red-500 hover:text-white hover:bg-red-600/80 hover:border-red-500 transition-all transform hover:scale-110 shadow-lg shadow-red-500/10">
+                    <i class="fab fa-youtube text-lg"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/yash-vishal/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-blue-600/10 border border-blue-500/30 rounded-full flex items-center justify-center text-blue-400 hover:text-white hover:bg-blue-600 hover:border-blue-500 transition-all transform hover:scale-110 shadow-lg shadow-blue-500/10">
+                    <i class="fab fa-linkedin-in text-lg"></i>
+                </a>
+                <a href="https://t.me/Scripter_yash_official" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-sky-500/10 border border-sky-400/30 rounded-full flex items-center justify-center text-sky-400 hover:text-white hover:bg-sky-500 hover:border-sky-400 transition-all transform hover:scale-110 shadow-lg shadow-sky-500/10">
+                    <i class="fab fa-telegram-plane text-lg"></i>
+                </a>
+                <a href="mailto:reviewsworld01@gmail.com" class="w-12 h-12 bg-indigo-500/10 border border-indigo-500/30 rounded-full flex items-center justify-center text-indigo-400 hover:text-white hover:bg-indigo-600 hover:border-indigo-500 transition-all transform hover:scale-110 shadow-lg shadow-indigo-500/10">
+                    <i class="fas fa-envelope text-lg"></i>
+                </a>
+                <a href="https://wa.me/919525182488" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-emerald-500/10 border border-emerald-500/30 rounded-full flex items-center justify-center text-emerald-400 hover:text-white hover:bg-emerald-600/80 hover:border-emerald-500 transition-all transform hover:scale-110 shadow-lg shadow-emerald-500/10">
+                    <i class="fab fa-whatsapp text-lg"></i>
+                </a>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center text-sm gap-4">
+                <p>&copy; 2026 Reviews World. Crafted with passion by Yash Vishal.</p>
+                <p class="text-slate-600">Last Updated: 26-06-2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script Modules -->
+    <script src="nav.js?v=1.1"></script>
+    <script src="particles.js?v=1.1"></script>
+</body>
+
+</html>

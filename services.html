@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Yash Vishal</title>
+    
+    <!-- Favicon & Search Engine Metadata -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <!-- Preconnect CDNs for Speed -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#030712',
+                            card: 'rgba(15, 23, 42, 0.6)',
+                            primary: '#4f46e5',
+                            secondary: '#06b6d4',
+                            accent: '#d946ef',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Custom Style Modules -->
+    <link rel="stylesheet" href="styles.css?v=1.2">
+    <link rel="stylesheet" href="animations.css?v=1.2">
+</head>
+
+<body class="text-slate-100">
+
+    <!-- Background Blobs -->
+    <div class="glow-blob bg-indigo-600 w-96 h-96 top-20 left-10"></div>
+    <div class="glow-blob bg-fuchsia-500 w-80 h-80 bottom-20 left-[25%]" style="animation-delay: 10s;"></div>
+
+    <!-- Header Navigation -->
+    <header class="glass-nav fixed top-0 left-0 w-full z-40">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-black tracking-wider text-white">
+                My portfolio<span class="text-cyan-400">.</span>
+            </a>
+            
+            <button id="menu-btn" class="md:hidden text-slate-100 hover:text-cyan-400 transition-colors focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+
+            <nav id="nav-menu" class="hidden md:flex md:items-center space-y-4 md:space-y-0 md:space-x-8 absolute md:relative top-full left-0 w-full md:w-auto bg-slate-950/95 md:bg-transparent border-b border-slate-800 md:border-0 p-6 md:p-0">
+                <a href="index.html" class="block text-slate-300 hover:text-white transition-colors duration-300 font-medium py-1">Home</a>
+                <a href="about.html" class="block text-slate-300 hover:text-white transition-colors duration-300 font-medium py-1">About</a>
+                <a href="services.html" class="block text-slate-300 hover:text-white transition-colors duration-300 font-medium py-1">Services</a>
+                <a href="projects.html" class="block text-slate-300 hover:text-white transition-colors duration-300 font-medium py-1">Projects</a>
+                <a href="contact.html" class="block text-slate-300 hover:text-white transition-colors duration-300 font-medium py-1">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="relative z-10 pt-32 pb-24 min-h-screen page-fade-in">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl md:text-5xl font-black tracking-tight text-white mb-4">What I Do</h2>
+                <div class="w-16 h-1 bg-gradient-to-r from-indigo-500 to-cyan-400 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="glass-card p-8 rounded-2xl flex flex-col justify-between h-full reveal glow-indigo" data-delay="50">
+                    <div class="space-y-6">
+                        <div class="w-14 h-14 bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 rounded-2xl flex items-center justify-center text-2xl">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">App Promotion</h3>
+                        <p class="text-slate-400 leading-relaxed text-sm">
+                            Boosting app store rankings and customer acquisition through custom organic growth solutions, ASO audits, and review campaign planning.
+                        </p>
+                    </div>
+                    <div class="pt-6 text-xs text-indigo-300 font-semibold uppercase tracking-wider">Active since 2021</div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="glass-card p-8 rounded-2xl flex flex-col justify-between h-full reveal glow-cyan" data-delay="100">
+                    <div class="space-y-6">
+                        <div class="w-14 h-14 bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 rounded-2xl flex items-center justify-center text-2xl">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">Web Development</h3>
+                        <p class="text-slate-400 leading-relaxed text-sm">
+                            Creating highly interactive frontends, portfolio platforms, and functional dashboards utilizing Tailwind CSS, TypeScript, and modern JS.
+                        </p>
+                    </div>
+                    <div class="pt-6 text-xs text-cyan-300 font-semibold uppercase tracking-wider">Fast & Responsive</div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="glass-card p-8 rounded-2xl flex flex-col justify-between h-full reveal glow-fuchsia" data-delay="150">
+                    <div class="space-y-6">
+                        <div class="w-14 h-14 bg-fuchsia-500/10 border border-fuchsia-500/20 text-fuchsia-400 rounded-2xl flex items-center justify-center text-2xl">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">AI Training</h3>
+                        <p class="text-slate-400 leading-relaxed text-sm">
+                            Fine-tuning deep-feature Convolutional Neural Networks (CNNs) for computer vision image identification tasks, alongside RLHF alignment paradigms, semantic assessment, and reinforcement tuning for transformer-based LLM architectures.
+                        </p>
+                    </div>
+                    <div class="pt-6 text-xs text-fuchsia-300 font-semibold uppercase tracking-wider">Neural & LLM Tuning</div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="glass-card p-8 rounded-2xl flex flex-col justify-between h-full reveal glow-emerald" data-delay="200">
+                    <div class="space-y-6">
+                        <div class="w-14 h-14 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded-2xl flex items-center justify-center text-2xl">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">Digital Marketing</h3>
+                        <p class="text-slate-400 leading-relaxed text-sm">
+                            Formulating strategic digital campaigns, monitoring web analytics metrics, and advising brands on optimal growth channels.
+                        </p>
+                    </div>
+                    <div class="pt-6 text-xs text-emerald-300 font-semibold uppercase tracking-wider">ROI Focused</div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="glass-card p-8 rounded-2xl flex flex-col justify-between h-full reveal glow-blue" data-delay="250">
+                    <div class="space-y-6">
+                        <div class="w-14 h-14 bg-blue-500/10 border border-blue-500/20 text-blue-400 rounded-2xl flex items-center justify-center text-2xl">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">App Development (iOS & Play Store)</h3>
+                        <p class="text-slate-400 leading-relaxed text-sm">
+                            Engineering native and cross-platform mobile apps for iOS and Android Play Store. Custom WebView integration, package compiling, and user-friendly interface designs.
+                        </p>
+                    </div>
+                    <div class="pt-6 text-xs text-blue-300 font-semibold uppercase tracking-wider">iOS & Play Store</div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="glass-card p-8 rounded-2xl flex flex-col justify-between h-full reveal glow-red" data-delay="300">
+                    <div class="space-y-6">
+                        <div class="w-14 h-14 bg-red-500/10 border border-red-500/20 text-red-400 rounded-2xl flex items-center justify-center text-2xl">
+                            <i class="fa-solid fa-video"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">Social Media Video Promotion</h3>
+                        <p class="text-slate-400 leading-relaxed text-sm">
+                            Strategizing and executing targeting video campaigns on YouTube, TikTok, and social channels. Optimizing algorithmic reach, click-through rates, and audience retention metrics.
+                        </p>
+                    </div>
+                    <div class="pt-6 text-xs text-red-300 font-semibold uppercase tracking-wider">Social Media Video</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-900 py-12 relative z-20">
+        <div class="container mx-auto px-6 text-center text-slate-500">
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="https://youtube.com/@reviews_world_official?si=1Y357cJqrMC6U7Kt" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-red-500/10 border border-red-500/30 rounded-full flex items-center justify-center text-red-500 hover:text-white hover:bg-red-600/80 hover:border-red-500 transition-all transform hover:scale-110 shadow-lg shadow-red-500/10">
+                    <i class="fab fa-youtube text-lg"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/yash-vishal/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-blue-600/10 border border-blue-500/30 rounded-full flex items-center justify-center text-blue-400 hover:text-white hover:bg-blue-600 hover:border-blue-500 transition-all transform hover:scale-110 shadow-lg shadow-blue-500/10">
+                    <i class="fab fa-linkedin-in text-lg"></i>
+                </a>
+                <a href="https://t.me/Scripter_yash_official" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-sky-500/10 border border-sky-400/30 rounded-full flex items-center justify-center text-sky-400 hover:text-white hover:bg-sky-500 hover:border-sky-400 transition-all transform hover:scale-110 shadow-lg shadow-sky-500/10">
+                    <i class="fab fa-telegram-plane text-lg"></i>
+                </a>
+                <a href="mailto:reviewsworld01@gmail.com" class="w-12 h-12 bg-indigo-500/10 border border-indigo-500/30 rounded-full flex items-center justify-center text-indigo-400 hover:text-white hover:bg-indigo-600 hover:border-indigo-500 transition-all transform hover:scale-110 shadow-lg shadow-indigo-500/10">
+                    <i class="fas fa-envelope text-lg"></i>
+                </a>
+                <a href="https://wa.me/919525182488" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-emerald-500/10 border border-emerald-500/30 rounded-full flex items-center justify-center text-emerald-400 hover:text-white hover:bg-emerald-600/80 hover:border-emerald-500 transition-all transform hover:scale-110 shadow-lg shadow-emerald-500/10">
+                    <i class="fab fa-whatsapp text-lg"></i>
+                </a>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center text-sm gap-4">
+                <p>&copy; 2026 Reviews World. Crafted with passion by Yash Vishal.</p>
+                <p class="text-slate-600">Last Updated: 26-06-2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script Modules -->
+    <script src="nav.js?v=1.1"></script>
+</body>
+
+</html>

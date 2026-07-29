@@ -1,0 +1,13 @@
+{
+  "name": "yash-vishal-portfolio",
+  "version": "1.0.0",
+  "description": "Yash Vishal Secured Portfolio Web",
+  "main": "build-obfuscated.js",
+  "scripts": {
+    "build": "node build-obfuscated.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "javascript-obfuscator": "^4.1.0"
+  }
+}
