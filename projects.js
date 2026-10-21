@@ -383,7 +383,20 @@ window.addEventListener('keydown', (e) => {
     }
 });
 
+// Expose on window for instant SPA navigation
+window.renderProjects = renderProjects;
+window.filterProjects = filterProjects;
+window.openProjectDetails = openProjectDetails;
+window.closeProjectDetails = closeProjectDetails;
+window.prevSlide = prevSlide;
+window.nextSlide = nextSlide;
+window.goToSlide = goToSlide;
+
 // Render projects on page load
-document.addEventListener('DOMContentLoaded', () => {
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+        renderProjects();
+    });
+} else {
     renderProjects();
-});
+}

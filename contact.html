@@ -9,8 +9,14 @@
     <!-- Favicon & Search Engine Metadata -->
     <link rel="icon" type="image/png" href="favicon.png">
     
-    <!-- Preconnect CDNs for Speed -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <!-- Preconnect CDNs & Instant Page Prefetch for Speed -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="prefetch" href="index.html">
+    <link rel="prefetch" href="about.html">
+    <link rel="prefetch" href="services.html">
+    <link rel="prefetch" href="projects.html">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -142,13 +148,15 @@
             </div>
             <div class="flex flex-col md:flex-row justify-between items-center text-sm gap-4">
                 <p>&copy; 2026 Reviews World. Crafted with passion by Yash Vishal.</p>
-                <p class="text-slate-600">Last Updated: 29-07-2026</p>
+                <p class="text-slate-600">Last Updated: 22-10-2026</p>
             </div>
         </div>
     </footer>
 
     <!-- Script Modules -->
-    <script src="nav.js?v=1.1"></script>
+    <script src="particles.js?v=2.0"></script>
+    <script src="projects.js?v=2.0"></script>
+    <script src="nav.js?v=2.0"></script>
 </body>
 
 </html>
